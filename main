@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoWithRohan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #cba892, #e0c7b0);
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #9c6e52;
+      color: white;
+    }
+
+    .logo {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 1.5em;
+    }
+
+    .login {
+      background-color: red;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .menu {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .categories {
+      display: none;
+      background-color: #fff3e6;
+      padding: 10px;
+    }
+
+    .categories a {
+      display: block;
+      padding: 5px 0;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .product-box {
+      display: flex;
+      margin: 10px;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .product-image {
+      flex: 1;
+      background-color: #eee;
+      min-height: 150px;
+    }
+
+    .product-details {
+      flex: 1;
+      padding: 10px;
+      background-color: #f8f4f0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="menu" onclick="toggleCategories()">&#9776;</div>
+    <div class="logo">GoWithRohan</div>
+    <a class="login" href="#">LOGIN</a>
+  </header>
+
+  <div class="categories" id="categoryMenu">
+    <a href="#">All Products</a>
+    <a href="#">Shoes</a>
+    <a href="#">Gadgets</a>
+    <a href="#">Home Essentials</a>
+    <!-- Add more categories here -->
+  </div>
+
+  <div class="product-container">
+    <div class="product-box">
+      <div class="product-image">Product image</div>
+      <div class="product-details">Product details</div>
+    </div>
+    <div class="product-box">
+      <div class="product-image">Product image</div>
+      <div class="product-details">Product details</div>
+    </div>
+    <!-- Duplicate more product-box blocks as needed -->
+  </div>
+
+  <script>
+    function toggleCategories() {
+      const menu = document.getElementById('categoryMenu');
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
